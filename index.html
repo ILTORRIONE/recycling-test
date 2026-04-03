@@ -8,20 +8,16 @@
         :root { --main-color: #1a1a1a; --text-light: #666; --bg: #ffffff; --line: #eeeeee; --accent: #8c764b; }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: var(--bg); color: var(--main-color); -webkit-font-smoothing: antialiased; }
         
-        /* Header stile Carandini */
-        .header { padding: 30px 20px; text-align: center; border-bottom: 1px solid var(--line); }
-        .logo-text { font-size: 1.4rem; letter-spacing: 5px; font-weight: 300; text-transform: uppercase; }
+        .header { padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--line); }
+        .logo-img { max-width: 200px; height: auto; }
 
-        /* Hero Section */
         .hero { padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto; }
-        .hero h1 { font-size: 2rem; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px; }
-        .hero p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
+        .hero h1 { font-size: 1.8rem; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 15px; }
+        .hero p { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
         .slash { color: var(--accent); margin: 0 4px; font-weight: 300; }
 
-        /* Immagine Prodotto */
         .product-img { width: 100%; max-width: 1100px; display: block; margin: 0 auto 40px; }
 
-        /* Tabella Smaltimento */
         .info-container { max-width: 900px; margin: 0 auto; padding: 0 20px 80px; }
         .item-row { display: flex; padding: 30px 0; border-bottom: 1px solid var(--line); align-items: center; }
         @media (max-width: 768px) { .item-row { flex-direction: column; text-align: center; } }
@@ -33,15 +29,13 @@
 
         .material-code { display: block; margin-top: 8px; font-size: 0.85rem; font-weight: bold; color: var(--accent); }
 
-        /* Icone Internazionali */
         .icon-box { display: flex; gap: 10px; justify-content: flex-end; }
         @media (max-width: 768px) { .icon-box { justify-content: center; } }
-        .icon-sm { height: 35px; width: auto; opacity: 0.8; }
+        .icon-sm { height: 40px; width: auto; }
 
-        /* Sezione Francia (Obbligatoria) */
-        .france-section { background: #f9f9f9; padding: 40px 20px; text-align: center; border-radius: 10px; margin-top: 40px; }
+        .france-section { background: #fdfdfd; padding: 40px 20px; text-align: center; border: 1px solid #f0f0f0; border-radius: 4px; margin-top: 40px; }
         .triman-logo { height: 50px; margin-bottom: 15px; }
-        .france-text { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .france-text { font-size: 0.8rem; color: #666; text-transform: uppercase; letter-spacing: 1px; line-height: 1.8; }
 
         .footer { padding: 60px 20px; text-align: center; font-size: 0.75rem; color: #ccc; letter-spacing: 2px; text-transform: uppercase; border-top: 1px solid var(--line); }
     </style>
@@ -49,7 +43,7 @@
 <body>
 
     <header class="header">
-        <div class="logo-text">IL TORRIONE</div>
+        <img src="logo.png" alt="IL TORRIONE" class="logo-img">
     </header>
 
     <section class="hero">
@@ -65,45 +59,19 @@
         
         <div class="item-row">
             <div class="item-label">Bottiglia <span class="slash">/</span> Bottle <span class="slash">/</span> Bouteille <span class="slash">/</span> Botella</div>
-            <div class="content">
+            <div class="item-content">
                 Vetro <span class="slash">/</span> Glass <span class="slash">/</span> Verre <span class="slash">/</span> Vidrio
                 <span class="material-code">GL 70 <span class="slash">|</span> RACCOLTA VETRO</span>
             </div>
             <div class="item-icons">
                 <div class="icon-box">
-                    <img src="https://www.ecoembesthecircularcampus.com/wp-content/uploads/Icono-contenedor-verde.png" alt="Spain Glass" class="icon-sm">
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-label">Tappo <span class="slash">/</span> Cap <span class="slash">/</span> Bouchon <span class="slash">/</span> Tapón</div>
-            <div class="content">
-                Sughero <span class="slash">/</span> Cork <span class="slash">/</span> Liège <span class="slash">/</span> Corcho
-                <span class="material-code">FOR 51 <span class="slash">|</span> ORGANICO / ORGANIC</span>
-            </div>
-            <div class="item-icons">
-                <div class="icon-box">
-                    <img src="https://www.ecoembesthecircularcampus.com/wp-content/uploads/Icono-contenedor-marron.png" alt="Spain Organic" class="icon-sm">
-                </div>
-            </div>
-        </div>
-
-        <div class="item-row">
-            <div class="item-label">Etichetta <span class="slash">/</span> Label <span class="slash">/</span> Étiquette <span class="slash">/</span> Etiqueta</div>
-            <div class="content">
-                Carta <span class="slash">/</span> Paper <span class="slash">/</span> Papier <span class="slash">/</span> Papel
-                <span class="material-code">PAP 22 <span class="slash">|</span> RACCOLTA CARTA</span>
-            </div>
-            <div class="item-icons">
-                <div class="icon-box">
-                    <img src="https://www.ecoembesthecircularcampus.com/wp-content/uploads/Icono-contenedor-azul.png" alt="Spain Paper" class="icon-sm">
+                    <img src="vetro-icon.png" alt="Spain Glass" class="icon-sm">
                 </div>
             </div>
         </div>
 
         <div class="france-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Logo_Triman.svg/1200px-Logo_Triman.svg.png" alt="Triman France" class="triman-logo">
+            <img src="triman.png" alt="Triman France" class="triman-logo">
             <div class="france-text">
                 FR: Bouteille et bouchon à trier. <br>
                 Pensez au tri! <span class="slash">/</span> Check local guidelines.
@@ -113,7 +81,7 @@
     </div>
 
     <footer class="footer">
-        © 2026 IL TORRIONE - EXCELLENCE IN PACKAGING
+        © 2026 IL TORRIONE
     </footer>
 
 </body>
