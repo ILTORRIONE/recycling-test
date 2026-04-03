@@ -3,76 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sostenibilità e Riciclo | Brand Name</title>
+    <title>Sostenibilità | Sustainability | Durabilité | Sostenibilidad</title>
     <style>
-        :root { --main-color: #1a1a1a; --text-light: #666; --bg: #ffffff; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; background: var(--bg); color: var(--main-color); -webkit-font-smoothing: antialiased; }
+        :root {
+            --primary: #1a1a1a;
+            --accent: #8c764b; /* Un tono oro/bronzo elegante per i codici materiali */
+            --bg: #ffffff;
+            --line: #e5e5e5;
+        }
+        body { 
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+            margin: 0; background: var(--bg); color: var(--primary); 
+            line-height: 1.5; -webkit-font-smoothing: antialiased;
+        }
         
-        /* Hero Section */
-        .hero { padding: 80px 20px; text-align: center; border-bottom: 1px solid #eee; }
-        .hero h1 { font-size: 2.5rem; font-weight: 300; letter-spacing: -1px; margin-bottom: 10px; text-transform: uppercase; }
-        .hero p { color: var(--text-light); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
-
-        /* Image Section (Simile a Carandini) */
-        .product-img { width: 100%; max-height: 500px; object-fit: cover; margin: 40px 0; }
-
-        /* Recycling Info Section */
-        .info-section { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
-
-        .item { border-top: 1px solid #eee; padding-top: 20px; }
-        .item h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: #999; }
-        .item p { font-size: 1.1rem; line-height: 1.6; margin: 0; }
-        .material-code { font-weight: bold; color: var(--main-color); margin-top: 10px; display: block; }
-
-        /* Footer */
-        .footer { padding: 100px 20px 40px; text-align: center; font-size: 0.8rem; letter-spacing: 1px; color: #ccc; text-transform: uppercase; }
+        /* Header con Logo */
+        .header { padding: 40px 20px; text-align: center; border-bottom: 1px solid var(--line); }
+        .logo { max-width: 180px; margin-bottom: 20px; }
         
-        .btn-contact { display: inline-block; margin-top: 40px; padding: 15px 40px; border: 1px solid #000; text-decoration: none; color: #000; transition: 0.3s; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
-        .btn-contact:hover { background: #000; color: #fff; }
+        /* Sezione Titolo Multilingua */
+        .hero { padding: 60px 20px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { 
+            font-size: 1.8rem; font-weight: 300; letter-spacing: 2px; 
+            text-transform: uppercase; margin-bottom: 15px; 
+        }
+        .hero p { color: #666; font-size: 0.9rem; letter-spacing: 0.5px; }
+
+        /* Immagine Prodotto Full Width */
+        .product-image { width: 100%; height: auto; display: block; margin: 0 auto; max-width: 1200px; }
+
+        /* Griglia Materiali */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .row { 
+            display: flex; justify-content: space-between; align-items: flex-start; 
+            padding: 30px 0; border-bottom: 1px solid var(--line);
+        }
+        @media (max-width: 768px) { .row { flex-direction: column; gap: 10px; } }
+
+        .label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #999; width: 30%; }
+        @media (max-width: 768px) { .label { width: 100%; } }
+
+        .content { width: 65%; font-size: 1.1rem; font-weight: 400; }
+        @media (max-width: 768px) { .content { width: 100%; } }
+
+        .slash { color: var(--accent); margin: 0 5px; font-weight: 300; }
+        .material-code { 
+            display: inline-block; margin-top: 10px; font-size: 0.8rem; 
+            font-weight: bold; letter-spacing: 1px; color: var(--accent);
+        }
+
+        .footer { padding: 80px 20px; text-align: center; font-size: 0.7rem; color: #bbb; letter-spacing: 1px; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
+    <header class="header">
+        <img src="logo.png" alt="IL TORRIONE" class="logo" onerror="this.style.display='none';">
+        <div style="font-size: 1.2rem; letter-spacing: 4px; font-weight: 300;">IL TORRIONE</div>
+    </header>
+
     <section class="hero">
-        <h1>Sostenibilità</h1>
-        <p>Il nostro impegno per il futuro passa attraverso gesti quotidiani. Ecco come smaltire correttamente questo pack.</p>
+        <h1>Sostenibilità <span class="slash">/</span> Sustainability <span class="slash">/</span> Durabilité <span class="slash">/</span> Sostenibilidad</h1>
+        <p>
+            Istruzioni per il corretto smaltimento dell'imballaggio <span class="slash">/</span> 
+            Instructions for correct packaging disposal <span class="slash">/</span> 
+            Instructions per l'élimination correcte de l'emballage <span class="slash">/</span> 
+            Instrucciones para la correcta eliminación del embalaje
+        </p>
     </section>
 
-    <img src="pack.jpg" alt="Packaging" class="product-img" onerror="this.style.display='none'">
+    <img src="pack.jpg" alt="Packaging" class="product-image" onerror="this.style.display='none';">
 
-    <section class="info-section">
-        <div class="grid">
-            <div class="item">
-                <h3>Contenitore</h3>
-                <p>Vetro Bianco Premium</p>
-                <span class="material-code">GL 70 • VETRO</span>
-            </div>
-            <div class="item">
-                <h3>Tappo</h3>
-                <p>Legno e Sughero naturale</p>
-                <span class="material-code">FOR 51 • ORGANICO</span>
-            </div>
-            <div class="item">
-                <h3>Etichetta</h3>
-                <p>Carta FSC certificata</p>
-                <span class="material-code">PAP 22 • CARTA</span>
-            </div>
-            <div class="item">
-                <h3>Sigillo</h3>
-                <p>Plastica termoretraibile</p>
-                <span class="material-code">PVC 03 • PLASTICA</span>
+    <div class="container">
+        
+        <div class="row">
+            <div class="label">Contenitore <span class="slash">/</span> Container <span class="slash">/</span> Récipient <span class="slash">/</span> Envase</div>
+            <div class="content">
+                Vetro <span class="slash">/</span> Glass <span class="slash">/</span> Verre <span class="slash">/</span> Vidrio
+                <br><span class="material-code">GL 70 • VETRO / GLASS / VERRE / VIDRIO</span>
             </div>
         </div>
 
-        <div style="text-align: center;">
-            <a href="mailto:info@tuobrand.com" class="btn-contact">Contattaci</a>
+        <div class="row">
+            <div class="label">Tappo <span class="slash">/</span> Cap <span class="slash">/</span> Bouchon <span class="slash">/</span> Tapón</div>
+            <div class="content">
+                Legno e Sughero <span class="slash">/</span> Wood and Cork <span class="slash">/</span> Bois et Liège <span class="slash">/</span> Madera e Corcho
+                <br><span class="material-code">FOR 51 • ORGANICO / ORGANIC / ORGANIQUE / ORGÁNICO</span>
+            </div>
         </div>
-    </section>
+
+        <div class="row">
+            <div class="label">Etichetta <span class="slash">/</span> Label <span class="slash">/</span> Étiquette <span class="slash">/</span> Etiqueta</div>
+            <div class="content">
+                Carta <span class="slash">/</span> Paper <span class="slash">/</span> Papier <span class="slash">/</span> Papel
+                <br><span class="material-code">PAP 22 • CARTA / PAPER / PAPIER / PAPEL</span>
+            </div>
+        </div>
+
+    </div>
 
     <footer class="footer">
-        © 2026 Sustainable Packaging Initiative
+        IL TORRIONE - 2026 - All Rights Reserved
     </footer>
 
 </body>
